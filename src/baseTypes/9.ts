@@ -11,7 +11,7 @@ type ObjType = {
   title: string;
   likes: number;
   accounts: Accounts;
-  status: string;
+  status: 'open' | 'close'
   details: Details;
 }
 

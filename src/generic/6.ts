@@ -7,6 +7,10 @@
   Виправте тип у аргументі функції так, щоб не було помилок типу.
 */
 
+
+
+//------------ Partial ---------------//
+
 type User = {
   name: string;
   surname: string;
@@ -14,12 +18,30 @@ type User = {
   password: string;
 }
 
-function createOrUpdateUser(userData: Pick<User, "email" | "password">) { /// 
+function createOrUpdateUser(userData: Partial<User>) { /// 
   // Оновлення користувача
 }
 
 createOrUpdateUser({ email: 'user@mail.com', password: 'password123' });
 
 export { };
+  
+  
+//------------- Pick ---------------//
+
+// type User = {
+//   name: string;
+//   surname: string;
+//   email: string;
+//   password: string;
+// }
+
+// function createOrUpdateUser(userData: Pick<User, "email" | "password">) { /// 
+//   // Оновлення користувача
+// }
+
+// createOrUpdateUser({ email: 'user@mail.com', password: 'password123' });
+
+// export { };
 
 
